@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "short_name": "zigMOO",
+  "name": "zigMOO",
+  "description": "React front-end WebSocket-telnet proxy client for MOO",
+  "categories": ["games"],
+  "icons": [
+    {
+      "src": "/favicon.ico?v=12042022",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon-16x16.png?v=12042022",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png?v=12042022",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-192x192.png?v=12042022",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png?v=12042022",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "id": "play.zigmoo.net",
+  "display": "standalone",
+  "theme_color": "#ecc51b",
+  "background_color": "#ecc51b",
+  "orientation": "any"
+}

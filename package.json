@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "UNLICENSED",
   "private": true,
+  "description": "Monorepo for zigMOO",
   "scripts": {
     "start": "nx run palladium:start",
     "stop": "nx run palladium:stop",
