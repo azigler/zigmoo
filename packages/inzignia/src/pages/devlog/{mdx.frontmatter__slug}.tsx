@@ -36,7 +36,6 @@ export const query = graphql`
 } */
 
 const Post: React.FC<DevlogPostProps> = ({ data, children }) => {
-  console.log(data)
   if (!data || !data.mdx || !data.mdx.frontmatter || !data.mdx.frontmatter.slug)
     return <Redirect noThrow to="/devlog/" />
 
