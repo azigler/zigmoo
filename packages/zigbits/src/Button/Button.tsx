@@ -29,7 +29,7 @@ export const Button: React.FC<ButtonProps> = ({
         className={styles.front}
         style={bgColor ? { backgroundColor: `var(--${bgColor})` } : {}}
       >
-        {children}okokik
+        {children}
       </span>
     </button>
   )
