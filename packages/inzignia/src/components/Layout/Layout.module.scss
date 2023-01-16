@@ -1,0 +1,53 @@
+@import "./variables";
+
+.layoutDiv {
+  font-family: "Capriola", sans-serif;
+  max-width: $layout-width;
+  margin: 0 auto;
+  background-color: var(--tangerine-shadow);
+  border-style: solid;
+  border-color: var(--darkened);
+  border-width: 0 0.5rem;
+  overflow: scroll;
+  height: 100vh;
+
+  main {
+    padding: 0.5rem 1rem;
+    padding-bottom: 30vw;
+    background-image: url("../../images/backgroundPlants.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+
+  @media screen and (max-width: $layout-width) {
+    border: none;
+  }
+}
+
+.notFoundText {
+  color: var(--black);
+  margin: 1rem 0;
+}
+
+.notFoundImage {
+  background-image: url("../../images/zigmooLogo.svg");
+  height: 10rem;
+  width: 10rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(1px 2px 1px var(--white));
+}
+
+.notFoundOuterDiv {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.notFoundInnerDiv {
+  display: flex;
+  flex-direction: column;
+  max-width: 14rem;
+  justify-content: space-evenly;
+}

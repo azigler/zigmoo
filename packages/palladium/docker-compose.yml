@@ -1,0 +1,108 @@
+---
+version: "3.9"
+networks:
+  default:
+    name: $PALLADIUM_DOCKER_NETWORK
+services:
+  listmonk:
+    container_name: listmonk
+    image: listmonk/listmonk:latest
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      - TZ=UTC
+      - LISTMONK_app__address=0.0.0.0:9000
+      - LISTMONK_app__admin_username=$PALLADIUM_LISTMONK_ADMIN_USER
+      - LISTMONK_app__admin_password=$PALLADIUM_LISTMONK_ADMIN_PASSWORD
+      - LISTMONK_db__host=postgres
+      - LISTMONK_db__user=$PALLADIUM_LISTMONK_POSTGRES_USER
+      - LISTMONK_db__password=$PALLADIUM_LISTMONK_POSTGRES_PASSWORD
+  mattermost:
+    container_name: mattermost
+    image: mattermost/mattermost-team-edition:latest
+    restart: unless-stopped
+    user: 0:0
+    depends_on:
+      - postgres
+    environment:
+      - TZ=UTC
+      - MM_SQLSETTINGS_DRIVERNAME=postgres
+      - MM_SQLSETTINGS_DATASOURCE=postgres://$PALLADIUM_MATTERMOST_POSTGRES_USER:$PALLADIUM_MATTERMOST_POSTGRES_PASSWORD@postgres:5432/mattermost?sslmode=disable&connect_timeout=10
+      - MM_SERVICESETTINGS_SITEURL=https://mattermost.$PALLADIUM_HOSTNAME
+      - MM_SERVICESETTINGS_ENABLEBOTACCOUNTCREATION=true
+      - MM_SERVICESETTINGS_ENABLEUSERACCESSTOKENS=true
+      - MM_SERVICESETTINGS_ENABLEOAUTHSERVICEPROVIDER=true
+      - MM_SERVICESETTINGS_ENABLEPOSTUSERNAMEOVERRIDE=true
+      - MM_SERVICESETTINGS_ENABLEPOSTICONOVERRIDE=true
+      - MM_SERVICESETTINGS_ENABLEDEVELOPER=true
+      - MM_SERVICESETTINGS_ENABLETESTING=true
+      - MM_PLUGINSETTINGS_AUTOMATICPREPACKAGEDPLUGINS=true
+      - MM_EXPERIMENTALSETTINGS_ENABLEAPPBAR=true
+      - MM_PLUGINSETTINGS_ENABLEUPLOADS=true
+      - MM_LOGSETTINGS_CONSOLELEVEL=DEBUG
+      - MM_LOGSETTINGS_FILELEVEL=DEBUG
+      - MM_FILESETTINGS_MAXFILESIZE=123524266
+      - MM_FEATUREFLAGS_AppsEnabled=true
+      - MM_FEATUREFLAGS_PluginApps=1.1.0
+    volumes:
+      - $PALLADIUM_DIR/containers/mattermost/config:/mattermost/config
+      - $PALLADIUM_DIR/containers/mattermost/data:/mattermost/data
+      - $PALLADIUM_DIR/containers/mattermost/logs:/mattermost/logs
+      - $PALLADIUM_DIR/containers/mattermost/plugins:/mattermost/plugins
+      - $PALLADIUM_DIR/containers/mattermost/client/plugins:/mattermost/client/plugins
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    restart: unless-stopped
+    environment:
+      - TZ=UTC
+      - POSTGRES_PASSWORD=$PALLADIUM_POSTGRES_ROOT_PASSWORD
+    volumes:
+      - $PALLADIUM_DIR/containers/postgres/data:/var/lib/postgresql/data
+      - $PALLADIUM_DIR/containers/postgres/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+  redis:
+    container_name: redis
+    image: redis:latest
+    restart: unless-stopped
+    command: redis-server --save 60 1 --loglevel warning --requirepass $PALLADIUM_REDIS_PASSWORD
+    volumes: 
+      - $PALLADIUM_DIR/containers/redis/data:/data
+  swag:
+    container_name: swag
+    image: lscr.io/linuxserver/swag:latest
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+      - URL=$PALLADIUM_HOSTNAME
+      - SUBDOMAINS=wildcard
+      - VALIDATION=dns
+      - DNSPLUGIN=cloudflare
+    ports:
+      - 443:443
+      - 80:80
+    volumes:
+      - $PALLADIUM_DIR/containers/swag/config:/config
+  wikijs:
+    container_name: wikijs
+    image: lscr.io/linuxserver/wikijs:latest
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+      - DB_TYPE=postgres
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_USER=$PALLADIUM_WIKIJS_POSTGRES_USER
+      - DB_PASS=$PALLADIUM_WIKIJS_POSTGRES_PASSWORD
+      - DB_NAME=wikijs
+    volumes:
+      - $PALLADIUM_DIR/containers/wikijs/config:/config
+      - $PALLADIUM_DIR/containers/wikijs/data:/data

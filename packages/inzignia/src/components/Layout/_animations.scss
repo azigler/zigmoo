@@ -1,0 +1,38 @@
+@keyframes background-to-top {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-color: var(--red);
+  }
+  12.5% {
+    background-color: var(--orange);
+  }
+  25% {
+    background-color: var(--yellow);
+  }
+  37.5% {
+    background-color: var(--green);
+  }
+  50% {
+    background-color: var(--cyan);
+  }
+  62.5% {
+    background-color: var(--blue);
+  }
+  75% {
+    background-color: var(--purple);
+  }
+  87.5% {
+    background-color: var(--pink);
+  }
+  100% {
+    background-color: var(--red);
+  }
+}

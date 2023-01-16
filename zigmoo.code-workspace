@@ -1,0 +1,66 @@
+{
+	"folders": [
+		{
+			"name": "z¡gMOO 🐮",
+			"path": "."
+		},
+	],
+	"settings": {
+		"workbench.colorTheme": "One Dark Pro",
+		"workbench.iconTheme": "material-icon-theme",
+		"workbench.startupEditor": "none",
+		"python.defaultInterpreterPath": "/usr/bin/python3",
+		"eslint.packageManager": "yarn",
+		"eslint.validate": [
+			"javascript",
+			"javascriptreact",
+			"typescript",
+			"typescriptreact"
+		],
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		},
+		"go.toolsManagement.autoUpdate": true,
+		"files.associations": {
+			".TODO": "plaintext"
+		},
+		"git.autofetch": true,
+		"git.confirmSync": false,
+		"workbench.editor.untitled.hint": "hidden",
+		"explorer.confirmDragAndDrop": false,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"[markdown]": {
+			"editor.defaultFormatter": "yzhang.markdown-all-in-one"
+		},
+		"[jsonc]": {
+			"editor.defaultFormatter": "vscode.json-language-features"
+		},
+		"editor.wordWrap": "on",
+		"editor.accessibilitySupport": "off",
+		"todo-tree.filtering.includeHiddenFiles": true,
+		"prettier.semi": false,
+		"prettier.ignorePath": ".gitignore",
+		"editor.tabSize": 2,
+		"typescript.enablePromptUseWorkspaceTsdk": true,
+		"typescript.tsdk": "node_modules/typescript/lib",
+	},
+	"extensions": {
+		"recommendations": [
+			"nrwl.angular-console",
+			"esbenp.prettier-vscode",
+			"yzhang.markdown-all-in-one",
+			"Gruntfuggly.todo-tree",
+			"syler.sass-indented",
+			"dbaeumer.vscode-eslint",
+			"naumovs.color-highlight",
+			"MithrilSoftware.moocode",
+			"zhuangtongfa.material-theme",
+			"unifiedjs.vscode-mdx",
+			"PKief.material-icon-theme",
+			"dbaeumer.vscode-eslint",
+			"csstools.postcss",
+			"sysoev.language-stylus"
+		]
+	}
+}

@@ -1,0 +1,34 @@
+{
+  "name": "inzignia",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "description": "Public website for zigMOO",
+  "homepage": "https://www.zigmoo.net",
+  "scripts": {
+    "start": "gatsby develop -o",
+    "serve": "gatsby serve",
+    "build": "gatsby build",
+    "clean": "gatsby clean && rm -rf ./node_modules rm -rf ./cache"
+  },
+  "devDependencies": {
+    "@code-hike/mdx": "^0.7.4",
+    "@mdx-js/react": "^2.2.1",
+    "@netlify/plugin-gatsby": "^3.5.0",
+    "@react-spring/types": "^9.6.1",
+    "@react-spring/web": "^9.6.1",
+    "gatsby": "^5.4.0",
+    "gatsby-plugin-google-gtag": "^5.4.0",
+    "gatsby-plugin-image": "^3.4.0",
+    "gatsby-plugin-manifest": "^5.4.0",
+    "gatsby-plugin-mdx": "^5.4.0",
+    "gatsby-plugin-netlify": "^5.1.0",
+    "gatsby-plugin-sass": "^6.4.0",
+    "gatsby-plugin-sharp": "^5.4.0",
+    "gatsby-plugin-sitemap": "^6.4.0",
+    "gatsby-source-filesystem": "^5.4.0",
+    "gatsby-transformer-sharp": "^5.4.0",
+    "sass": "^1.57.1",
+    "zigbits": "*"
+  }
+}

@@ -1,0 +1,45 @@
+$break-small: 375px;
+$break-smallp1: $break-small + 1px;
+$break-smallm1: $break-small - 1px;
+
+$break-medium: 768px;
+$break-mediump1: $break-medium + 1px;
+$break-mediumm1: $break-medium - 1px;
+
+$break-large: 1024px;
+$break-largep1: $break-large + 1px;
+$break-largem1: $break-large - 1px;
+
+$layout-width: 800px;
+
+:root {
+  --primary: var(--green);
+  --secondary: var(--pink);
+  --tertiary: var(--cyan);
+
+  --red: #ffadad;
+  --orange: #ffd6a5;
+  --yellow: #fdffb6;
+  --green: #caffbf;
+  --cyan: #9bf6ff;
+  --blue: #a0c4ff;
+  --purple: #bdb2ff;
+  --pink: #ffc6ff;
+  --white: #fffffc;
+  --black: #121212;
+
+  --lightened: #ffffff14;
+  --darkened: #000000bd;
+  --shadowed: #00000030;
+  --tangerine-shadow: #ffb728df;
+
+  --marigold: #f3ba39;
+  --sand: #e5d0a1;
+  --grass: #71a309;
+  --dark-grass: #436304;
+  --discord-blurple: #5865f2;
+  --wikijs-blue: #0c60be;
+  --cowbell-gold: #ecc51b;
+  --clover-green: #bfd7a4;
+  --sky-blue: #9bf6ff;
+}

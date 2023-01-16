@@ -1,0 +1,12 @@
+{
+  "name": "palladium",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "description": "Web service suite via Docker",
+  "scripts": {
+    "start": "sh ./start.sh",
+    "start:setup": "sh ./start.sh --setup",
+    "stop": "sh ./stop.sh"
+  }
+}

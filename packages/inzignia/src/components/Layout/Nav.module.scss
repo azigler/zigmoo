@@ -1,0 +1,18 @@
+@import "./variables";
+
+.mainNav {
+  background-color: var(--grass);
+  background-image: linear-gradient(
+    to left,
+    var(--grass) 0%,
+    var(--dark-grass) 100%
+  );
+  filter: drop-shadow(0px 8px 12px var(--darkened));
+}
+
+.navList {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 0;
+  flex-wrap: wrap;
+}

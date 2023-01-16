@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "plugin:jsx-a11y/recommended",
+    "react-app",
+    "react-app/jest"
+  ],
+  "plugins": [
+    "jsx-a11y"
+  ],
+  "ignorePatterns": [
+    "dist",
+    "build",
+    "public"
+  ]
+}

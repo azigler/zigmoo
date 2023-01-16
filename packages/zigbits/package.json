@@ -1,0 +1,73 @@
+{
+  "name": "zigbits",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "description": "Shared components and utilities for zigMOO",
+  "main": "dist/index.js",
+  "module": "dist/tsdx-react-storybook-starter.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "run-p watch storybook",
+    "build": "tsdx build --format cjs,esm,umd,system",
+    "clean": "rm -rf ./dist && rm -rf ./node_modules && rm -rf ./storybook-static && rm -rf ../../coverage/zigbits",
+    "watch": "tsdx watch",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "rm -rf storybook-static && build-storybook",
+    "test": "tsdx test --passWithNoTests --json --outputFile=../../coverage/zigbits/jest-test-results.json --coverageDirectory=../../coverage/zigbits --coverage",
+    "test:ci": "yarn test --runInBand --ci",
+    "test:watch": "yarn test --watch --maxWorkers=25%"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^.+.(css|sass|scss|pcss|sss|less|styl|stylus|png|gif|jpg|jpeg|webp|svg|mdx)$": "jest-transform-stub"
+    },
+    "globals": {
+      "IS_REACT_ACT_ENVIRONMENT": true
+    },
+    "coverageReporters": [
+      "json-summary",
+      "html",
+      "text-summary"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@rollup/plugin-image": "^3.0.1",
+    "@rollup/plugin-replace": "^5.0.1",
+    "@rollup/plugin-url": "^8.0.1",
+    "@storybook/addon-a11y": "^6.5.13",
+    "@storybook/addon-design-assets": "^6.2.9",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-jest": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/addon-storysource": "^6.5.13",
+    "@storybook/addons": "^6.5.13",
+    "@storybook/builder-webpack5": "^6.5.13",
+    "@storybook/manager-webpack5": "^6.5.13",
+    "@storybook/mdx2-csf": "^0.0.3",
+    "@storybook/react": "^6.5.13",
+    "@svgr/rollup": "^6.5.1",
+    "@svgr/webpack": "^6.5.1",
+    "babel-jest": "^29.3.1",
+    "babel-loader": "^9.1.0",
+    "file-loader": "^6.2.0",
+    "jest-transform-stub": "^2.0.0",
+    "less-loader": "^11.1.0",
+    "postcss": "^8.4.19",
+    "postcss-loader": "^7.0.1",
+    "postcss-nested": "^6.0.0",
+    "postcss-preset-env": "^7.8.3",
+    "react-is": "^18.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass-loader": "^13.2.0",
+    "stylus-loader": "^7.1.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.1"
+  },
+  "resolutions": {
+    "@storybook/core-common/webpack": "^5",
+    "@storybook/core-server/webpack": "^5",
+    "@storybook/react/webpack": "^5"
+  }
+}

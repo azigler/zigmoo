@@ -1,14 +1,15 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
-# compiled output
+# builds
 dist
+build
+public
 tmp
 /out-tsc
+**/src/gatsby-types.d.ts
 
 # dependencies
 node_modules
 
-# IDEs and editors
+# workspaces
 /.idea
 .project
 .classpath
@@ -16,15 +17,13 @@ node_modules
 *.launch
 .settings/
 *.sublime-workspace
-
-# IDE - VSCode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# misc
+# miscellaneous
 /.sass-cache
 /connect.lock
 /coverage
@@ -33,7 +32,27 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-
-# System Files
+.TODO
+.cache
+.parcel-cache
+storybook-static
 .DS_Store
 Thumbs.db
+
+# secrets
+.env
+palladium-cert.pem
+palladium-privkey.pem
+
+# containers
+**/palladium/containers/**
+!**/palladium/containers/swag
+!**/palladium/containers/swag/config
+!**/palladium/containers/swag/config/nginx
+!**/palladium/containers/swag/config/nginx/proxy-confs
+!**/palladium/containers/swag/config/nginx/proxy-confs/listmonk.subdomain.conf
+!**/palladium/containers/swag/config/nginx/proxy-confs/mattermost.subdomain.conf
+!**/palladium/containers/swag/config/nginx/proxy-confs/wiki.subdomain.conf
+
+# Local Netlify folder
+.netlify

@@ -1,0 +1,62 @@
+@import "../../components/Layout/variables";
+
+.logo {
+  position: relative;
+  background-image: linear-gradient(
+    25deg,
+    var(--clover-green) 0%,
+    var(--sky-blue) 100%
+  );
+  height: 33rem;
+  overflow: hidden;
+  transition: all 0.5s;
+
+  @media screen and (max-width: $layout-width) {
+    height: 11rem;
+  }
+}
+
+.logoText {
+  font-family: "Luckiest Guy";
+  font-size: 5.75rem;
+  position: absolute;
+  font-weight: initial;
+  bottom: 5rem;
+  left: 8rem;
+  user-select: none;
+  color: var(--white);
+  text-shadow: 3px 2px var(--darkened);
+  transition: all 1s;
+
+  @media screen and (max-width: $layout-width) {
+    text-shadow: 2px 1px var(--darkened);
+    font-size: 4.5rem;
+    left: 3.8rem;
+    bottom: 3.5rem;
+  }
+
+  @media screen and (max-width: $break-smallp1) {
+    bottom: 2rem;
+    left: 0.8rem;
+  }
+}
+
+.logoImage {
+  position: relative;
+  pointer-events: none;
+  image-rendering: pixelated;
+  background-image: url("../../images/logoLandscape.png");
+  width: 102%;
+  margin-left: -1px;
+  height: 102%;
+  background-position: bottom;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  transition: all 0.5s;
+
+  @media screen and (max-width: $layout-width) {
+    transform: scale(1.15);
+  }
+}

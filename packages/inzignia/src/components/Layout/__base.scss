@@ -1,0 +1,40 @@
+@import "./_reset.scss";
+@import "./_variables.scss";
+@import "./_animations.scss";
+@import "https://fonts.googleapis.com/css2?family=Capriola&family=Luckiest+Guy&display=swap";
+@import "@code-hike/mdx/styles.css";
+
+html {
+  text-rendering: optimizeLegibility;
+  overscroll-behavior: none;
+  overflow: auto;
+
+  background-image: url("./../../images/backgroundBunny.png");
+  background-blend-mode: luminosity;
+  background-size: 35px 35px;
+  background-color: var(--red);
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation-name: background-to-top, rainbow;
+    animation-direction: alternate;
+    animation-duration: 360s;
+    animation-iteration-count: infinite;
+  }
+}
+
+.ch-codegroup {
+  .ch-editor-button {
+    opacity: 0;
+    transition: all 0.2s;
+  }
+  &:hover {
+    .ch-editor-button {
+      opacity: 1;
+    }
+  }
+  &:active {
+    .ch-editor-button {
+      color: var(--grass);
+    }
+  }
+}

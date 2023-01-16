@@ -1,0 +1,19 @@
+{
+  "name": "belljar",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "main": "dist/index.js",
+  "description": "Node back-end WebSocket-telnet proxy client for MOO",
+  "homepage": "https://belljar.zigmoo.net",
+  "scripts": {
+    "start": "run-p watch serve",
+    "serve": "nodemon -e js -w ./dist",
+    "build": "tsc -p .",
+    "clean": "rm -rf ./dist && rm -rf ./node_modules",
+    "watch": "tsc --watch -p ."
+  },
+  "devDependencies": {
+    "@hapi/hapi": "^21.1.0",
+    "nodemon": "^2.0.20"
+  }
+}
