@@ -5,13 +5,14 @@
   "private": true,
   "description": "Monorepo for zigMOO",
   "scripts": {
-    "start": "nx run palladium:start",
+    "start": "nx run palladium:start && nx run auroch:start",
     "stop": "nx run palladium:stop",
+    "serve": "run-p serve:inzignia serve:zigbits",
+    "serve:inzignia": "sleep 10 && nx run inzignia:start",
+    "serve:zigbits": "nx run zigbits:start",
     "build": "nx run-many --target=build",
     "clean": "nx run-many --target=clean && rm -rf ./node_modules && rm -rf ./coverage",
-    "watch": "run-p watch:belljar watch:zigbits",
-    "watch:belljar": "nx run belljar:watch",
-    "watch:zigbits": "nx run zigbits:watch"
+    "watch": "nx run belljar:watch"
   },
   "devDependencies": {
     "@nrwl/nx-cloud": "latest",

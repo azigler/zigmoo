@@ -12,6 +12,7 @@
 [ ] --- BELLJAR --- [ ]
 =======================
 [ ] add favicon
+[ ] set up inside auroch
 [X] start belljar in monorepo
 [X] update package description
 [X] remove dome
@@ -79,7 +80,7 @@
 [ ] --- PALLADIUM --- [ ]
 =========================
 [ ] clear and reboot after apps 1.2 launch
-[ ] re-add belljar proxy conf
+[X] re-add belljar proxy conf
 [X] set up on digitalocean
 [X] add and forget credentials
 
