@@ -8,7 +8,6 @@ export function Client() {
     <ContextProvider>
       <Router />
       <Socket />
-      test
     </ContextProvider>
   )
 }

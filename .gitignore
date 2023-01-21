@@ -32,7 +32,6 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-.TODO
 .cache
 .parcel-cache
 storybook-static

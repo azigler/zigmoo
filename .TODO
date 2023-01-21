@@ -1,0 +1,135 @@
+[ ] --- ZIGMOO --- [ ]
+======================
+[ ] standardize testing for all repos
+[X] reformat todo list here
+
+
+[ ] --- AUROCH --- [ ]
+======================
+[ ] initialize
+
+
+[ ] --- BELLJAR --- [ ]
+=======================
+[ ] add favicon
+[X] start belljar in monorepo
+[X] update package description
+[X] remove dome
+
+
+[ ] --- COWBELL --- [ ]
+=======================
+[ ] enable nav link on inzignia
+[ ] clear token if invalid
+[ ] add proper server response log window components
+[ ] open new socket if socket is closed
+[ ] make sure we clean up listeners
+[ ] add google analytics
+[ ] set up vitals reporting (https://web.dev/vitals/)
+[ ] track events (logins, plays, wins, etc)
+[X] move to monorepo
+[X] update package and manifest description
+[X] redo og image
+[X] update client info name to zigMOO
+[X] start cra typescript pwa for moo client (cowbell)
+
+
+
+[ ] --- INZIGNIA --- [ ]
+========================
+[ ] fix null pages
+[ ] improve schema for devlog posts
+[ ] add svg icon to devlog posts
+[ ] change devlog post coloring to be based on slug
+[ ] add reading time
+[ ] add love button
+[ ] add next and prev buttons to devlog posts
+[ ] customize quartz markdown theme
+[ ] add to search console
+[ ] add analytics
+[ ] add semantic tags
+[ ] add emoji tag
+[ ] add mailing list form
+[X] move to monorepo
+[X] fix null devlog page
+[X] investigate hot reloading
+[X] push to pre-monorepo to netlify
+[X] write starting devlog posts
+[X] write initial website text
+[X] design initial website
+[X] devlog post
+[X] devlog excerpt
+[X] devlog home
+[X] home
+[X] 404
+[X] wiki button
+[X] play button
+[X] discord button
+[X] nav button
+[X] page title
+[X] button
+[X] nav
+[X] logo
+[X] split everything into components
+[X] make og image
+[X] roll head/metadata into layout
+[X] start zigmoo.net homepage
+
+
+[ ] --- PALLADIUM --- [ ]
+=========================
+[ ] clear and reboot after apps 1.2 launch
+[ ] re-add belljar proxy conf
+[X] set up on digitalocean
+[X] add and forget credentials
+
+
+[ ] --- ZIGBITS --- [ ]
+=======================
+[ ] refactor utils
+[ ] add schema support
+[ ] migrate everything in
+
+
+[ ] --- DISCORD --- [ ]
+=======================
+[ ] add description
+[ ] set up channels and roles
+[ ] add zigMOO bot to server
+[ ] enable nav link on inzignia
+[ ] create invite link and add to bookmarks
+[X] rename bot to zigMOO
+[X] create bot on developer portal
+
+
+[ ] --- WIKI.JS --- [ ]
+=======================
+[ ] configure settings
+[ ] set up oauth providers and permissions 
+[ ] initialize starting pages
+[ ] enable nav link on inzignia
+
+
+[ ] --- MATTERMOST --- [ ]
+==========================
+[ ] set up admin user after apps 1.2 launch
+[X] configure settings
+
+
+[ ] --- POSTGRES --- [ ]
+========================
+[ ] research and implement graphql
+
+
+[ ] --- REDIS --- [ ]
+=====================
+[ ] initialize
+
+
+[ ] --- LISTMONK --- [ ]
+========================
+[ ] configure settings
+[ ] configure and verify smtp
+[ ] make and test a mailing list
+[ ] make zigmoo mailing list
+[ ] add gform signups to list

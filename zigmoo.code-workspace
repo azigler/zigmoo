@@ -9,7 +9,6 @@
 		"workbench.colorTheme": "One Dark Pro",
 		"workbench.iconTheme": "material-icon-theme",
 		"workbench.startupEditor": "none",
-		"python.defaultInterpreterPath": "/usr/bin/python3",
 		"eslint.packageManager": "yarn",
 		"eslint.validate": [
 			"javascript",
@@ -20,7 +19,6 @@
 		"editor.codeActionsOnSave": {
 			"source.fixAll.eslint": true
 		},
-		"go.toolsManagement.autoUpdate": true,
 		"files.associations": {
 			".TODO": "plaintext"
 		},
@@ -44,6 +42,7 @@
 		"editor.tabSize": 2,
 		"typescript.enablePromptUseWorkspaceTsdk": true,
 		"typescript.tsdk": "node_modules/typescript/lib",
+		"todo-tree.tree.showBadges": true,
 	},
 	"extensions": {
 		"recommendations": [

@@ -15,7 +15,7 @@ const NotFound: React.FC<PageProps> = () => {
             The requested resource could not be found. Since this isn't a 3xx
             response, it probably wasn't
             <span style={{ fontStyle: "italic" }}>moo</span>
-            &#8209;ved...
+            &#8209;ved.
           </p>
           <NavButton to={"/"} bgColor={"white"} />
         </div>
